@@ -1,0 +1,8 @@
+<div class="container">
+  <form [formGroup]="fooBarQuixForm" (ngSubmit)="submitNumber()">
+    <p><label>Number to convert</label></p>
+    <p><input class="form-control" type="number" placeholder="inputNumber" formControlName="inputNumber"
+              [ngClass]="{ 'is-invalid': submitted && validation.inputNumber.errors }"/></p>
+    <p><button type="submit" [disabled]="validation.inputNumber.errors" class="btn btn-primary"> Convert</button></p>
+  </form>
+</div>

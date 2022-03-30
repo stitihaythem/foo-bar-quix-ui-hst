@@ -1,0 +1,13 @@
+<div>
+  <div class="container">
+
+    <h2>Already converted values : </h2>
+
+    <div *ngFor="let convertedValue of convertedValues">
+      <div class="card bg-gray">{{convertedValue.numberToConvert}} and the result is {{convertedValue.result}}</div>
+    </div>
+
+
+  </div>
+  <app-foo-bar-quix-form (submitNumberOutput)="convertNumber($event)"></app-foo-bar-quix-form>
+</div>
